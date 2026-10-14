@@ -3,7 +3,10 @@ from endpoints import api_bp
 
 
 app = Flask(__name__)
-
+with open("test.txt", "w") as f:
+    f.write("Hello\n")
+    f.write("World\n")
+    f.write("New line!")
 
 app.register_blueprint(api_bp)
 
